@@ -1,0 +1,12 @@
+cluster.name: "es-cluster"
+network.host: 0.0.0.0
+
+node.name: es01
+
+discovery.seed_hosts: [ "es02" ]
+cluster.initial_master_nodes: [ "es01", "es02" ]
+
+# 开启跨域访问支持，默认为false
+http.cors.enabled: true
+# 跨域访问允许的域名地址，(允许所有域名)以上使用正则
+http.cors.allow-origin: "*"
